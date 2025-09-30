@@ -8,83 +8,59 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T7WGJK95');</script>
   <!-- End Google Tag Manager -->
+
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>heyGuide · Únete como creador</title>
   <meta name="description" content="Empaqueta lo que sabes y empieza a monetizarlo."/>
- <style>
-/* =========================
-   Risspo style – brand-ready
-   ========================= */
 
-/* ---------- Tokens ---------- */
+  <!-- Open Graph / Twitter / Canonical -->
+  <link rel="canonical" href="https://risspo.com/creators" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="heyGuide · Únete como creador">
+  <meta property="og:description" content="Empaqueta lo que sabes y empieza a monetizarlo.">
+  <meta property="og:image" content="https://risspo.com/og/creator-landing.jpg">
+  <meta property="og:url" content="https://risspo.com/creators">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="heyGuide · Únete como creador">
+  <meta name="twitter:description" content="Empaqueta lo que sabes y empieza a monetizarlo.">
+  <meta name="twitter:image" content="https://risspo.com/og/creator-landing.jpg">
+
+  <!-- Tailwind (mantener antes de tu CSS para evitar sobrescrituras) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: "#F68C1E", fog: "#f7f7f9" },
+          boxShadow: { card: "0 10px 30px rgba(0,0,0,.10)" }
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS personalizado -->
+  <style>
 :root{
-  /* Brand */
-  --brand:#F68C1E;          /* naranja base */
-  --brand-end:#D9480F;      /* rojo profundo para degradé */
-  --brand-50:#FFF6ED;
-  --brand-100:#FFE7CF;
-  --brand-200:#FFD0A2;
-  --brand-300:#FFB36B;
-  --brand-400:#FF9A33;
-  --brand-500:#F68C1E;
-  --brand-600:#D57416;
-  --brand-700:#B35F0F;
-  --brand-800:#8A4B0A;
-  --brand-900:#5A2F05;
-
-  /* Neutrales */
-  --bg:#ffffff;
-  --fg:#111827;
-  --muted:#6B7280;
-  --border:#E5E7EB;
-
-  /* Dark section (CTA final) */
-  --dark:#111827;
-  --dark-fg:#ffffff;
-  --dark-muted:#CBD5E1;
-  --dark-border:#273041;
-
-  /* Efectos */
-  --ring:#D9480F;
-
-  /* Mesh cálido */
-  --mesh-1:#FF9A33; --mesh-2:#FFD166; --mesh-3:#FDE9D3;
-  --mesh-4:#F6B67A; --mesh-5:#FFE5C2;
-  --mesh-opacity:.55; --mesh-blur:40px;
-
-  /* Mesh gris (casos) */
-  --gmesh-1:#f3f4f6; --gmesh-2:#e5e7eb; --gmesh-3:#eef2f7;
-  --gmesh-4:#f1f5f9; --gmesh-5:#e6ebf2;
-  --gmesh-opacity:.6; --gmesh-blur:44px;
+  --accent:#F68C1E; /* brand naranja */
+  --mesh-1:#ff6b6b; --mesh-2:#ffd166; --mesh-3:#6ee7ff; --mesh-4:#b794f4; --mesh-5:#ff9ecd;
+  --mesh-opacity:0.55; --mesh-blur:40px;
+  --gmesh-1:#e5e7eb; --gmesh-2:#cbd5e1; --gmesh-3:#d1d5db; --gmesh-4:#e2e8f0; --gmesh-5:#f1f5f9;
+  --gmesh-opacity:0.6; --gmesh-blur:44px;
 }
 
-/* ---------- Base ---------- */
 html,body{
-  background:var(--bg);
-  color:var(--fg);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif
 }
 .no-scrollbar::-webkit-scrollbar{display:none}
 .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
 
-a[href]:not(.btn){
-  text-underline-offset:3px;
-}
-a[href]:not(.btn):hover{
-  color:var(--brand-700);
-}
-a[href]:focus-visible{
-  outline:2px solid var(--ring);
-  outline-offset:2px;
-}
+/* ===== LOGO HEADER ===== */
+header img{ box-shadow:none !important; }
+header img.block.md\:hidden{height:2.25rem;width:2.25rem}
+header img.hidden.md\:block{height:2rem}
 
-/* ---------- Header: logos sin sombra + tamaño ajustado ---------- */
-header img{ box-shadow:none !important; filter:none !important; }
-header img.block.md\:hidden{ height:2.25rem; width:2.25rem; } /* móvil: logo cuadrado */
-header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landscape */
-
-/* ---------- Botones ---------- */
+/* ===== BOTONES ===== */
 .btn{
   display:inline-flex;align-items:center;gap:.5rem;
   border-radius:999px;font-weight:600;
@@ -93,16 +69,17 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
   cursor:pointer;user-select:none;
 }
 
-/* Primario: degradé brand → rojo profundo */
+/* Primary con degradé */
 .btn-primary{
-  --start:var(--brand-500);
-  --end:var(--brand-end);
+  --brand-start:#F68C1E;
+  --brand-end:#D9480F;
+  --brand-focus:#D9480F;
 
   color:#fff;
-  background:linear-gradient(135deg, var(--start) 0%, var(--end) 100%);
+  background:linear-gradient(135deg, var(--brand-start) 0%, var(--brand-end) 100%);
   border:1px solid rgba(0,0,0,.06);
   box-shadow:0 6px 16px rgba(217,72,15,.28), inset 0 -1px 0 rgba(255,255,255,.08);
-  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease, background .12s ease;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease, background .12s ease;
 }
 .btn-primary:hover{
   filter:saturate(1.05) brightness(1.02);
@@ -115,7 +92,7 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
   box-shadow:0 4px 12px rgba(217,72,15,.22), inset 0 1px 0 rgba(0,0,0,.06);
 }
 .btn-primary:focus-visible{
-  outline:2px solid var(--ring);
+  outline:2px solid var(--brand-focus);
   outline-offset:2px;
 }
 .btn-primary:disabled,
@@ -123,61 +100,27 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
   opacity:.65; cursor:not-allowed; transform:none; box-shadow:none;
 }
 
-/* Secundario / Ghost */
+/* Secondary */
 .btn-secondary{
-  color:var(--fg); background:#fff;
-  border:1px solid var(--border);
+  color:#111827;background:#fff;
+  border:1px solid #e5e7eb;
   box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
-.btn-secondary:hover{ border-color:#D1D5DB; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+.btn-secondary:hover{ border-color:#d1d5db; box-shadow:0 2px 6px rgba(0,0,0,.06) }
+.btn-secondary:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
-.btn-ghost{
-  color:#374151; background:transparent; border:1px solid var(--border);
-}
-.btn-ghost:hover{ background:#F9FAFB; border-color:#D1D5DB; }
+/* Ghost */
+.btn-ghost{ color:#374151;background:transparent;border:1px solid #e5e7eb }
+.btn-ghost:hover{ background:#f9fafb;border-color:#d1d5db }
+.btn-ghost:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
-/* En secciones oscuras (CTA final) mantenemos el degradé legible */
-.on-dark{ color:var(--dark-fg); }
-.on-dark a[href]:not(.btn){ color:var(--dark-fg); text-decoration:underline; }
-.on-dark a[href]:not(.btn):hover{ color:#E5E7EB; }
-.on-dark .btn-primary{
-  background:linear-gradient(135deg, var(--brand-500) 0%, var(--brand-end) 100%);
-  color:#fff; border-color:rgba(255,255,255,.15);
-  box-shadow:0 8px 20px rgba(0,0,0,.35), inset 0 -1px 0 rgba(255,255,255,.08);
-}
-.on-dark .btn-secondary{
-  background:transparent; color:#fff; border-color:#ffffff80;
-}
-.on-dark .btn-ghost{
-  color:#E5E7EB; border-color:#ffffff40;
-}
-.on-dark .btn-ghost:hover{
-  background:rgba(255,255,255,.06); border-color:#ffffff70;
-}
+/* Variantes opcionales */
+.btn-primary.flat{ background:#F68C1E; box-shadow:0 6px 16px rgba(246,140,30,.25); }
+.btn-primary.flat:hover{ filter:brightness(1.05); }
+.btn-primary.aa{ background:#B35F0F; box-shadow:0 6px 16px rgba(179,95,15,.28); }
+.btn-primary.aa:hover{ filter:brightness(1.03); }
 
-/* ---------- Badges suaves brand ---------- */
-.badge-accent{
-  background:var(--brand-50);
-  color:var(--brand-900);
-  border:1px solid var(--brand-100);
-  border-radius:999px;
-  padding:.25rem .5rem;
-  font-weight:600; font-size:.7rem;
-}
-
-/* ---------- Bloques y tarjetas ---------- */
-.border{ border-color:var(--border); }
-.shadow-card{ box-shadow:0 10px 30px rgba(0,0,0,.10); }
-
-/* ---------- CTA sólido (fondo oscuro legible) ---------- */
-.cta-solid{ background:var(--dark); }
-.cta-solid.on-dark{ color:var(--dark-fg); }
-.cta-solid.on-dark h2,
-.cta-solid.on-dark h3{ color:#fff; }
-.cta-solid.on-dark p{ color:var(--dark-muted); }
-.cta-solid.on-dark a[href]:not(.btn){ color:#fff; }
-
-/* ---------- Mesh backgrounds recalibrados al brand ---------- */
+/* ===== Mesh backgrounds ===== */
 .mesh-gradient{position:relative;isolation:isolate;overflow:hidden}
 .mesh-gradient::before{
   content:"";position:absolute;inset:-20%;z-index:-1;
@@ -188,11 +131,11 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
     radial-gradient(30% 30% at 75% 75%, var(--mesh-4) 0%, transparent 60%),
     radial-gradient(22% 22% at 50% 45%, var(--mesh-5) 0%, transparent 65%),
     radial-gradient(60% 60% at 50% 0%, rgba(246,140,30,.06), transparent 70%);
-  filter:blur(var(--mesh-blur)) saturate(1.08);
-  opacity:var(--mesh-opacity);
-  animation:meshFloat 20s ease-in-out infinite alternate;
+  filter: blur(var(--mesh-blur)) saturate(1.15);
+  opacity: var(--mesh-opacity);
+  animation: meshFloat 20s ease-in-out infinite alternate;
 }
-.mesh-soft::before{ --mesh-opacity:.40; --mesh-blur:48px; }
+.mesh-soft::before{ --mesh-opacity:0.40; --mesh-blur:48px; }
 
 .mesh-gray{position:relative;isolation:isolate;overflow:hidden}
 .mesh-gray::before{
@@ -203,9 +146,9 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
     radial-gradient(28% 28% at 20% 80%, var(--gmesh-3) 0%, transparent 65%),
     radial-gradient(30% 30% at 75% 75%, var(--gmesh-4) 0%, transparent 60%),
     radial-gradient(22% 22% at 50% 45%, var(--gmesh-5) 0%, transparent 65%);
-  filter:blur(var(--gmesh-blur));
-  opacity:var(--gmesh-opacity);
-  animation:meshFloat 22s ease-in-out infinite alternate;
+  filter: blur(var(--gmesh-blur)) saturate(1);
+  opacity: var(--gmesh-opacity);
+  animation: meshFloat 22s ease-in-out infinite alternate;
 }
 @keyframes meshFloat{
   0%{transform:translate3d(-2%,-1%,0) scale(1.02)}
@@ -215,10 +158,29 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
 .mesh-gradient::after,.mesh-gray::after{
   content:"";position:absolute;inset:0;z-index:-1;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
-  mix-blend-mode:overlay;pointer-events:none;
+  mix-blend-mode: overlay;pointer-events:none;
 }
 
-/* ---------- Animaciones utilitarias ---------- */
+/* ===== CTA sólido (arregla contraste del bloque final) ===== */
+.cta-solid{
+  position:relative;
+  background:#0b1220; /* fondo sólido accesible */
+  color:#fff;
+  isolation:isolate;
+}
+.cta-solid::before{
+  content:"";
+  position:absolute;inset:-20%;
+  z-index:-1;
+  background:
+    radial-gradient(40% 40% at 15% 20%, rgba(246,140,30,.30) 0%, transparent 60%),
+    radial-gradient(35% 35% at 80% 30%, rgba(217,72,15,.25) 0%, transparent 60%),
+    radial-gradient(60% 60% at 50% 100%, rgba(255,255,255,.06) 0%, transparent 70%);
+  filter: blur(40px) saturate(1.1);
+}
+.cta-solid .text-muted{color:#cbd5e1}
+
+/* ===== Animaciones / hover ===== */
 @media (prefers-reduced-motion: reduce){
   .mesh-gradient::before,.mesh-gray::before{animation:none}
   .reveal{transition:none}
@@ -229,36 +191,26 @@ header img.hidden.md\:block{ height:2rem; width:auto; }       /* desktop: landsc
 .hvr-raise{transition:transform .25s ease, box-shadow .25s ease}
 .hvr-raise:hover{transform:translateY(-3px)}
 
-/* ---------- Select idioma ---------- */
+/* ===== Select idioma ===== */
 select.lang{
   appearance:none;-webkit-appearance:none;-moz-appearance:none;
   padding:.375rem 2rem .375rem .75rem;
-  border-radius:999px;border:1px solid var(--border);
+  border-radius:999px;border:1px solid #d1d5db;
   background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M6 8l4 4 4-4' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right .5rem center/16px;
   font-size:.875rem;color:#374151
 }
 
-/* ---------- Modal/video fixes ---------- */
+/* ===== Modal/video FIXES ===== */
 #demo-modal .overlay{ background:rgba(0,0,0,.6); backdrop-filter:none; -webkit-backdrop-filter:none; }
 html.modal-open, body.modal-open{overflow:hidden;height:100%}
 #demo-video{ border-radius:0; -webkit-transform:translateZ(0); transform:translateZ(0); backface-visibility:hidden; will-change:transform; }
 @media (max-width: 767px){ #demo-modal .overlay{ display:none; } }
-</style>
 
-
-
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { accent: "#F68C1E", fog: "#f7f7f9" },
-          boxShadow: { card: "0 10px 30px rgba(0,0,0,.10)" }
-        }
-      }
-    }
-  </script>
+/* iOS scroll contain dentro del modal */
+@supports (-webkit-touch-callout: none) {
+  #demo-modal { overscroll-behavior: contain; }
+}
+  </style>
 </head>
 <body class="bg-white text-gray-900 selection:bg-accent/10 selection:text-gray-900">
 
@@ -278,11 +230,12 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
         loading="eager"
         decoding="async"
       />
-      <!-- Desktop: landscape -->
+      <!-- Desktop: landscape (definimos width para evitar CLS) -->
       <img
         src="/risspo-logo-landscape.svg"
         alt="Risspo"
-        class="hidden md:block h-8 w-auto drop-shadow"
+        class="hidden md:block h-8 w-[140px] drop-shadow"
+        width="140" height="32"
         loading="eager"
         decoding="async"
       />
@@ -304,8 +257,6 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
   </div>
 </header>
 
-
-
   <!-- HERO + BENEFICIOS -->
   <section class="relative mesh-gradient mesh-soft">
     <div id="hero" class="mx-auto max-w-7xl px-6 pt-20 md:pt-28 pb-12 grid lg:grid-cols-2 gap-10 items-start">
@@ -325,11 +276,13 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
       </div>
 
       <div class="w-full reveal">
-        <!-- DEMO -->
-        <article class="relative w-full overflow-hidden rounded-3xl border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,.08)] hvr-raise cursor-pointer group" data-open-demo>
+        <!-- DEMO (ahora accesible con teclado) -->
+        <article class="relative w-full overflow-hidden rounded-3xl border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,.08)] hvr-raise cursor-pointer group"
+                 data-open-demo role="button" tabindex="0" aria-label="Reproducir demo de heyGuide">
           <div class="relative w-full aspect-[16/12] sm:aspect-[16/10] md:aspect-[16/9] bg-black">
             <img src="demo-preview.png?q=80&w=1600&auto=format&fit=crop"
-                 alt="heyGuide demo" class="absolute inset-0 h-full w-full object-cover opacity-90 group-hover:opacity-80 transition">
+                 alt="heyGuide demo" class="absolute inset-0 h-full w-full object-cover opacity-90 group-hover:opacity-80 transition"
+                 fetchpriority="high" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
             <div class="absolute inset-0 m-auto h-20 w-20 rounded-full bg-white/95 shadow-lg grid place-items-center transition group-hover:scale-105">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#F68C1E" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -344,7 +297,8 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
         <!-- 2 CARDS bloqueadas -->
         <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a href="#signup" class="group relative rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-[0_6px_18px_rgba(0,0,0,.06)] hvr-raise">
-            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur" data-i18n="locked.badge">🔒 Locked</span>
+            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur"
+                  data-i18n="locked.badge" aria-label="Contenido bloqueado, desbloquear para acceder">🔒 Locked</span>
             <img src="https://cdn.pixabay.com/photo/2014/07/08/19/40/alley-387825_1280.jpg" alt="Street food Napoli" class="h-36 w-full object-cover">
             <div class="p-4 relative z-10">
               <div class="flex items-center justify-between">
@@ -355,7 +309,8 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
             </div>
           </a>
           <a href="#signup" class="group relative rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-[0_6px_18px_rgba(0,0,0,.06)] hvr-raise">
-            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur" data-i18n="locked.badge">🔒 Locked</span>
+            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur"
+                  data-i18n="locked.badge" aria-label="Contenido bloqueado, desbloquear para acceder">🔒 Locked</span>
             <img src="https://cdn.pixabay.com/photo/2016/10/13/16/26/web-agency-1738168_1280.jpg" alt="Productividad con apps no-code" class="h-36 w-full object-cover">
             <div class="p-4 relative z-10">
               <div class="flex items-center justify-between">
@@ -461,7 +416,7 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
     </div>
   </section>
 
-  <!-- CTA final -->
+  <!-- CTA final (con fondo oscuro accesible) -->
   <section id="signup" class="cta-solid on-dark reveal">
     <div class="mx-auto max-w-7xl px-6 py-20 md:py-24">
       <div class="max-w-3xl">
@@ -487,7 +442,7 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
     <div class="fixed inset-0 w-screen h-dvh bg-white rounded-none shadow-none mt-0 flex flex-col
                 md:relative md:mx-auto md:w-full md:max-w-2xl md:h-[88dvh] md:bg-white
                 md:rounded-3xl md:shadow-[0_20px_60px_rgba(0,0,0,.30)] md:mt-6">
-      <button id="demo-close" class="absolute top-3 right-3 z-10 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-gray-200">
+      <button id="demo-close" class="absolute top-3 right-3 z-10 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-gray-200" aria-label="Cerrar demo">
         <svg width="22" height="22" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="#111827" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
       <div class="relative w-full aspect-video bg-black">
@@ -546,7 +501,7 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
         "cases.3.cta":"Publish my recipes",
         "cta.final.head":"Start earning today by sharing what you already know.","cta.final.btn":"Join","footer.join":"Join",
         "demo.badge":"Story · 27 s","demo.title":"What is heyGuide in 30 seconds?","demo.meta":"By heyGuide · story",
-        "demo.points":[ "Package 5–10 photos, videos or notes into a short collection.","Set your price (€3–10 recommended) and share your bio link.","No endless subscriptions or long courses.","Perfect for guides, chefs, creators and micro-businesses." ],
+        "demo.points":[ "Package 5–10 photos, videos or notes into a short collection.","Set your price (€3–10 recommended) and share your bio link.","No endless subscriptions or long courses.","Perfect for guides, chefs, creators and micro-business." ],
         "demo.cta":"I want to publish my first collection",
         "locked.badge":"🔒 Locked",
         "locked1.title":"Street food Naples","locked1.meta":"Gastro · 7 stories","locked1.price":"€5.90",
@@ -648,9 +603,19 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
       updateFormLinks(lang);
     }
 
+    // UTM + lang en formularios por idioma
     function updateFormLinks(lang){
-      const form=formByLang[lang]||formByLang.en;
-      document.querySelectorAll("[data-join]").forEach(a=>a.setAttribute("href",form));
+      const base=formByLang[lang]||formByLang.en;
+      document.querySelectorAll("[data-join]").forEach(a=>{
+        const section = a.closest('section')?.id || 'header';
+        const url = new URL(base);
+        url.searchParams.set('utm_source','join-landing');
+        url.searchParams.set('utm_medium','cta');
+        url.searchParams.set('utm_campaign','creator-acquisition');
+        url.searchParams.set('utm_content', section + '_' + (a.getAttribute('data-i18n')||'btn'));
+        url.searchParams.set('lang', lang);
+        a.setAttribute('href', url.toString());
+      });
     }
 
     // Smooth scroll
@@ -688,8 +653,9 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
       const pageLang = (document.documentElement.lang || 'en').slice(0,2).toLowerCase();
       const tracks = demoVideo.textTracks; if (!tracks || !tracks.length) return;
       for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
-      let chosen = Array.from(tracks).find(t => (t.language || '').slice(0,2) === pageLang) ||
-                   Array.from(tracks).find(t => (t.language || '').slice(0,2) === 'en');
+      let chosen = Array.from(tracks).find(t => (t.language || '').slice(0,2) === pageLang)
+                 || Array.from(tracks).find(t => (t.language || '').slice(0,2) === 'en')
+                 || Array.from(tracks).find(t => (t.language || '').slice(0,2) === 'es');
       if (chosen) chosen.mode = 'showing';
     };
 
@@ -710,7 +676,14 @@ html.modal-open, body.modal-open{overflow:hidden;height:100%}
       demoVideo.pause();
     };
 
-    document.querySelectorAll('[data-open-demo]').forEach(el=>el.addEventListener('click', openDemo));
+    // Mouse + teclado (Enter/Espacio) para abrir la demo
+    document.querySelectorAll('[data-open-demo]').forEach(el=>{
+      el.addEventListener('click', openDemo);
+      el.addEventListener('keydown', (e)=>{
+        if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openDemo(); }
+      });
+    });
+
     document.getElementById('demo-close').addEventListener('click', closeDemo);
     demoModal.addEventListener('click',(e)=>{ if(e.target===demoModal) closeDemo(); });
     demoVideo.addEventListener('ended',()=>{ window.dataLayer.push({event:'demo_ended'}); });
