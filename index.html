@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T7WGJK95');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>heyGuide · Únete como creador</title>
+  <meta name="description" content="Empaqueta lo que sabes y empieza a monetizarlo."/>
+  <style>
+    :root{
+      --accent:#F68C1E;
+      --mesh-1:#ff6b6b; --mesh-2:#ffd166; --mesh-3:#6ee7ff; --mesh-4:#b794f4; --mesh-5:#ff9ecd;
+      --mesh-opacity:0.55; --mesh-blur:40px;
+      --gmesh-1:#e5e7eb; --gmesh-2:#cbd5e1; --gmesh-3:#d1d5db; --gmesh-4:#e2e8f0; --gmesh-5:#f1f5f9;
+      --gmesh-opacity:0.6; --gmesh-blur:44px;
+    }
+    html,body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif}
+    .no-scrollbar::-webkit-scrollbar{display:none}
+    .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+
+    .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-weight:600;padding:.75rem 1.25rem}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{opacity:.9}
+    .btn-secondary{color:#111827;background:#fff;border:1px solid #e5e7eb;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .btn-secondary:hover{border-color:#d1d5db;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    .btn-ghost{color:#374151;background:transparent;border:1px solid #e5e7eb}
+    .btn-ghost:hover{background:#f9fafb;border-color:#d1d5db}
+
+    .on-dark{color:#fff}
+    .on-dark .btn-primary{background:#fff;color:#111827}
+    .on-dark .btn-secondary{background:transparent;color:#fff;border-color:#ffffff80}
+
+    .mesh-gradient{position:relative;isolation:isolate;overflow:hidden}
+    .mesh-gradient::before{
+      content:"";position:absolute;inset:-20%;z-index:-1;
+      background:
+        radial-gradient(35% 35% at 10% 15%, var(--mesh-1) 0%, transparent 60%),
+        radial-gradient(30% 30% at 85% 20%, var(--mesh-2) 0%, transparent 60%),
+        radial-gradient(28% 28% at 20% 80%, var(--mesh-3) 0%, transparent 65%),
+        radial-gradient(30% 30% at 75% 75%, var(--mesh-4) 0%, transparent 60%),
+        radial-gradient(22% 22% at 50% 45%, var(--mesh-5) 0%, transparent 65%),
+        radial-gradient(60% 60% at 50% 0%, rgba(246,140,30,.06), transparent 70%);
+      filter: blur(var(--mesh-blur)) saturate(1.15);
+      opacity: var(--mesh-opacity);
+      animation: meshFloat 20s ease-in-out infinite alternate;
+    }
+    .mesh-soft::before{ --mesh-opacity:0.40; --mesh-blur:48px; }
+
+    .mesh-gray{position:relative;isolation:isolate;overflow:hidden}
+    .mesh-gray::before{
+      content:"";position:absolute;inset:-20%;z-index:-1;
+      background:
+        radial-gradient(35% 35% at 12% 18%, var(--gmesh-1) 0%, transparent 60%),
+        radial-gradient(30% 30% at 85% 22%, var(--gmesh-2) 0%, transparent 60%),
+        radial-gradient(28% 28% at 20% 80%, var(--gmesh-3) 0%, transparent 65%),
+        radial-gradient(30% 30% at 75% 75%, var(--gmesh-4) 0%, transparent 60%),
+        radial-gradient(22% 22% at 50% 45%, var(--gmesh-5) 0%, transparent 65%);
+      filter: blur(var(--gmesh-blur)) saturate(1);
+      opacity: var(--gmesh-opacity);
+      animation: meshFloat 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes meshFloat{
+      0%{transform:translate3d(-2%,-1%,0) scale(1.02)}
+      50%{transform:translate3d(2%,1.5%,0) scale(1.03)}
+      100%{transform:translate3d(-1%,1%,0) scale(1.015)}
+    }
+
+    .mesh-gradient::after,.mesh-gray::after{
+      content:"";position:absolute;inset:0;z-index:-1;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;pointer-events:none;
+    }
+
+    .cta-solid{background:#111827}
+
+    @media (prefers-reduced-motion: reduce){
+      .mesh-gradient::before,.mesh-gray::before{animation:none}
+      .reveal{transition:none}
+      .hvr-raise{transition:none}
+    }
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
+    .hvr-raise{transition:transform .25s ease, box-shadow .25s ease}
+    .hvr-raise:hover{transform:translateY(-3px)}
+
+    select.lang{appearance:none;-webkit-appearance:none;-moz-appearance:none;padding:.375rem 2rem .375rem .75rem;border-radius:999px;border:1px solid #d1d5db;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M6 8l4 4 4-4' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right .5rem center/16px;font-size:.875rem;color:#374151}
+
+    /* ===== Modal/video FIXES ===== */
+    #demo-modal .overlay{ background:rgba(0,0,0,.6); backdrop-filter:none; -webkit-backdrop-filter:none; }
+    html.modal-open, body.modal-open{overflow:hidden;height:100%}
+    #demo-video{ border-radius:0; -webkit-transform:translateZ(0); transform:translateZ(0); backface-visibility:hidden; will-change:transform; }
+    @media (max-width: 767px){ #demo-modal .overlay{ display:none; } }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: "#F68C1E", fog: "#f7f7f9" },
+          boxShadow: { card: "0 10px 30px rgba(0,0,0,.10)" }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 selection:bg-accent/10 selection:text-gray-900">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7WGJK95"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="mx-auto max-w-7xl px-6 flex items-center justify-between py-4">
+      <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
+        <svg viewBox="0 0 256 256" xmlns="logo-risspo.svg" aria-hidden="true" class="w-10 h-10 drop-shadow">
+          <g transform="translate(58,54) rotate(-5,100,70)">
+            <rect x="0" y="40" width="140" height="90" rx="18" fill="#F68C1E" opacity="0.20"/>
+            <rect x="10" y="20" width="140" height="90" rx="18" fill="#F68C1E" opacity="0.35"/>
+            <rect x="20" y="0"  width="140" height="90" rx="18" fill="#F68C1E"/>
+          </g>
+        </svg>
+        <span>heyGuide</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#beneficios" class="text-gray-600 hover:text-gray-900" data-i18n="nav.benefits">Beneficios</a>
+        <a href="#funciona" class="text-gray-600 hover:text-gray-900" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#signup" class="text-gray-600 hover:text-gray-900" data-i18n="nav.join">Únete</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <label class="sr-only" for="lang-select">Language</label>
+        <select id="lang-select" class="lang hvr-raise">
+          <option value="es">ES</option><option value="en">EN</option><option value="it">IT</option>
+        </select>
+        <a href="#" data-join class="btn btn-ghost hvr-raise" data-i18n="cta.joinShort">Unirme</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO + BENEFICIOS -->
+  <section class="relative mesh-gradient mesh-soft">
+    <div id="hero" class="mx-auto max-w-7xl px-6 pt-20 md:pt-28 pb-12 grid lg:grid-cols-2 gap-10 items-start">
+      <div class="reveal in">
+        <h1 class="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight" data-i18n="hero.headline">
+          Empaqueta lo que sabes y empieza a monetizarlo.
+        </h1>
+        <p class="mt-5 text-lg md:text-xl text-gray-700" data-i18n="hero.sub">
+          ¿Das clases, tours, recetas o compartes contenido? Transforma tu conocimiento en un producto digital simple y véndelo online a cualquier persona, en cualquier lugar.
+        </p>
+
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="#" target="_blank" data-join class="btn btn-primary hvr-raise" data-i18n="cta.joinBtn">Unirme</a>
+          <a href="#casos" class="btn btn-secondary hvr-raise" data-i18n="hero.cases">Ver casos reales</a>
+        </div>
+        <p class="mt-2 text-sm text-gray-600" data-i18n="hero.note">Tras enviar, 1 min de cuestionario.</p>
+      </div>
+
+      <div class="w-full reveal">
+        <!-- DEMO -->
+        <article class="relative w-full overflow-hidden rounded-3xl border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,.08)] hvr-raise cursor-pointer group" data-open-demo>
+          <div class="relative w-full aspect-[16/12] sm:aspect-[16/10] md:aspect-[16/9] bg-black">
+            <img src="demo-preview.png?q=80&w=1600&auto=format&fit=crop"
+                 alt="heyGuide demo" class="absolute inset-0 h-full w-full object-cover opacity-90 group-hover:opacity-80 transition">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 m-auto h-20 w-20 rounded-full bg-white/95 shadow-lg grid place-items-center transition group-hover:scale-105">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#F68C1E" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+              <p class="text-[11px] tracking-widest font-semibold opacity-90" data-i18n="demo.badge">Story · 27 s</p>
+              <h3 class="mt-1 text-2xl md:text-3xl font-semibold" data-i18n="demo.title">¿Qué es heyGuide en 30 segundos?</h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 CARDS bloqueadas -->
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="#signup" class="group relative rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-[0_6px_18px_rgba(0,0,0,.06)] hvr-raise">
+            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur" data-i18n="locked.badge">🔒 Locked</span>
+            <img src="https://cdn.pixabay.com/photo/2014/07/08/19/40/alley-387825_1280.jpg" alt="Street food Napoli" class="h-36 w-full object-cover">
+            <div class="p-4 relative z-10">
+              <div class="flex items-center justify-between">
+                <p class="font-semibold truncate" data-i18n="locked1.title">Street food Napoli</p>
+                <span class="text-accent font-semibold" data-i18n="locked1.price">€5.90</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="locked1.meta">Gastro · 7 stories</p>
+            </div>
+          </a>
+          <a href="#signup" class="group relative rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-[0_6px_18px_rgba(0,0,0,.06)] hvr-raise">
+            <span class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full bg-gray-900/85 text-white backdrop-blur" data-i18n="locked.badge">🔒 Locked</span>
+            <img src="https://cdn.pixabay.com/photo/2016/10/13/16/26/web-agency-1738168_1280.jpg" alt="Productividad con apps no-code" class="h-36 w-full object-cover">
+            <div class="p-4 relative z-10">
+              <div class="flex items-center justify-between">
+                <p class="font-semibold truncate" data-i18n="locked2.title">Apps 10× rápido (AI+Bubble)</p>
+                <span class="text-accent font-semibold" data-i18n="locked2.price">€9.90</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="locked2.meta">Productividad · 6 stories</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BENEFICIOS -->
+    <div id="beneficios" class="reveal">
+      <div class="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="p-8 rounded-3xl bg-white/85 backdrop-blur border border-white/60 shadow-[0_10px_30px_rgba(0,0,0,.10)] hvr-raise">
+            <div class="text-4xl">🪙</div>
+            <h3 class="mt-3 text-2xl font-semibold" data-i18n-nemoji="benefit.1.title">Gana dinero compartiendo lo que sabes</h3>
+            <p class="mt-2 text-gray-700" data-i18n="benefit.1.desc">Cobra cada vez que alguien desbloquee tu colección.</p>
+            <p class="mt-2 text-gray-600 text-[15px]" data-i18n="benefit.1.copy">Define un precio simple (recomendado €3–10), comparte tu enlace y listo. Sin marketplace complejo ni comisiones ocultas.</p>
+            <div class="mt-5 flex gap-3"><a href="#casos" class="btn btn-secondary hvr-raise" data-i18n="benefit.1.cta">Ver ejemplos</a></div>
+          </article>
+          <article class="p-8 rounded-3xl bg-white/85 backdrop-blur border border-white/60 shadow-[0_10px_30px_rgba(0,0,0,.10)] hvr-raise">
+            <div class="text-4xl">⚡</div>
+            <h3 class="mt-3 text-2xl font-semibold" data-i18n-nemoji="benefit.2.title">Stories fáciles, no cursos eternos</h3>
+            <p class="mt-2 text-gray-700" data-i18n="benefit.2.desc">Agrupa tus fotos, videos o notas en historias cortas y coherentes.</p>
+            <p class="mt-2 text-gray-600 text-[15px]" data-i18n="benefit.2.copy">Sube 5–10 piezas, añade notas y un mapa/checklist. Publicas en menos de una hora y puedes actualizar cuando quieras.</p>
+            <div class="mt-5 flex gap-3"><a href="#funciona" class="btn btn-secondary hvr-raise" data-i18n="benefit.2.cta">Cómo funciona</a></div>
+          </article>
+          <article class="p-8 rounded-3xl bg-white/85 backdrop-blur border border-white/60 shadow-[0_10px_30px_rgba(0,0,0,.10)] hvr-raise">
+            <div class="text-4xl">🌍</div>
+            <h3 class="mt-3 text-2xl font-semibold" data-i18n-nemoji="benefit.3.title">Comparte el link y cobra</h3>
+            <p class="mt-2 text-gray-700" data-i18n="benefit.3.desc">WhatsApp, Instagram, TikTok… sin intermediarios.</p>
+            <p class="mt-2 text-gray-600 text-[15px]" data-i18n="benefit.3.copy">Integra el enlace en tu bio, historias o QR. Los pagos se procesan de forma segura y recibes el ingreso automáticamente.</p>
+            <div class="mt-5 flex gap-3"><a href="#" data-join class="btn btn-primary hvr-raise" data-i18n="benefit.3.cta">Crear mi colección</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="funciona" class="bg-white reveal">
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="how.title">Cómo funciona</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="p-7 rounded-3xl bg-white border border-gray-200 hvr-raise">
+          <h3 class="font-semibold" data-i18n="how.1.title">1. Crea tu colección de stories</h3>
+          <p class="mt-2 text-gray-600" data-i18n="how.1.desc">Usa fotos, videos, notas o audios breves.</p>
+        </div>
+        <div class="p-7 rounded-3xl bg-white border border-gray-200 hvr-raise">
+          <h3 class="font-semibold" data-i18n="how.2.title">2. Pon tu precio</h3>
+          <p class="mt-2 text-gray-600" data-i18n="how.2.desc">Recomendado €3–10.</p>
+        </div>
+        <div class="p-7 rounded-3xl bg-white border border-gray-200 hvr-raise">
+          <h3 class="font-semibold" data-i18n="how.3.title">3. Comparte el link y cobra</h3>
+          <p class="mt-2 text-gray-600" data-i18n="how.3.desc">Cada cliente que lo desbloquee es ingreso extra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos -->
+  <section id="casos" class="mesh-gray reveal">
+    <div class="mx-auto max-w-7xl px-6 py-20 md:py-24 space-y-16 md:space-y-20">
+      <article class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-gray-700" data-i18n="case.badge">Caso real</p>
+          <h2 class="mt-2 text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight" data-i18n="cases.1.title">“¿Cuándo hacemos otro tour?”</h2>
+          <p class="mt-5 text-lg text-gray-800" data-i18n="cases.1.body">Soy guía en Roma...</p>
+          <div class="mt-6"><a href="#" data-join class="btn btn-primary hvr-raise" data-i18n="cases.1.cta">Quiero publicar mi colección</a></div>
+        </div>
+        <div class="relative">
+          <img src="https://cdn.pixabay.com/photo/2021/07/26/07/32/travel-6493621_1280.jpg?q=80&w=1600&auto=format&fit=crop" alt="" class="w-full h-[360px] md:h-[460px] object-cover rounded-3xl border border-gray-200 shadow-[0_12px_36px_rgba(0,0,0,.12)]">
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="order-2 lg:order-1 relative">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop" alt="" class="w-full h-[360px] md:h-[460px] object-cover rounded-3xl border border-gray-200 shadow-[0_12px_36px_rgba(0,0,0,.12)]">
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="text-sm uppercase tracking-widest text-gray-700" data-i18n="case.badge">Caso real</p>
+          <h2 class="mt-2 text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight" data-i18n="cases.2.title">De TikTok a “colección” vendible</h2>
+          <p class="mt-5 text-lg text-gray-800" data-i18n="cases.2.body">Tenía tips desperdigados...</p>
+          <div class="mt-6"><a href="#" data-join class="btn btn-primary hvr-raise" data-i18n="cases.2.cta">Crear mi primera colección</a></div>
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-gray-700" data-i18n="case.badge">Caso real</p>
+          <h2 class="mt-2 text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight" data-i18n="cases.3.title">Mis 7 recetas “infalibles”</h2>
+          <p class="mt-5 text-lg text-gray-800" data-i18n="cases.3.body">Siempre me pedían mis recetas...</p>
+          <div class="mt-6"><a href="#" data-join class="btn btn-primary hvr-raise" data-i18n="cases.3.cta">Publicar mis recetas</a></div>
+        </div>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1600&auto=format&fit=crop" alt="" class="w-full h-[360px] md:h-[460px] object-cover rounded-3xl border border-gray-200 shadow-[0_12px_36px_rgba(0,0,0,.12)]">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section id="signup" class="cta-solid on-dark reveal">
+    <div class="mx-auto max-w-7xl px-6 py-20 md:py-24">
+      <div class="max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight" data-i18n="cta.final.head">Empieza a ganar dinero hoy compartiendo lo que ya sabes.</h2>
+        <div class="mt-6 flex gap-3">
+          <a href="#" target="_blank" data-join class="btn btn-primary hvr-raise" data-i18n="cta.final.btn">Unirme</a>
+          <a href="#casos" class="btn btn-secondary hvr-raise" data-i18n="cta.final.see">Ver casos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200">
+    <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-500">© <span id="y"></span> heyGuide</p>
+      <a href="#" target="_blank" data-join class="btn btn-primary hvr-raise" data-i18n="footer.join">Únete</a>
+    </div>
+  </footer>
+
+  <!-- MODAL STORY -->
+  <div id="demo-modal" class="fixed inset-0 z-[80] hidden">
+    <div class="absolute inset-0 overlay"></div>
+    <div class="fixed inset-0 w-screen h-dvh bg-white rounded-none shadow-none mt-0 flex flex-col
+                md:relative md:mx-auto md:w-full md:max-w-2xl md:h-[88dvh] md:bg-white
+                md:rounded-3xl md:shadow-[0_20px_60px_rgba(0,0,0,.30)] md:mt-6">
+      <button id="demo-close" class="absolute top-3 right-3 z-10 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-gray-200">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="#111827" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="relative w-full aspect-video bg-black">
+        <video id="demo-video" class="absolute inset-0 h-full w-full object-cover"
+               controls playsinline preload="metadata"
+               poster="demo-preview.png?q=80&w=1600&auto=format&fit=crop">
+          <source src="Demo.mp4" type="video/mp4">
+          <track kind="captions" src="demo_en.vtt" srclang="en" label="English">
+          <track kind="captions" src="demo_es.vtt" srclang="es" label="Español">
+          <track kind="captions" src="demo_it.vtt" srclang="it" label="Italiano">
+        </video>
+      </div>
+      <div class="p-5 md:p-6 space-y-3 overflow-y-auto flex-1 rounded-t-2xl md:rounded-none bg-white">
+        <h3 class="text-2xl md:text-3xl font-semibold tracking-tight" data-i18n="demo.title">¿Qué es heyGuide en 30 segundos?</h3>
+        <p class="text-sm text-gray-500" data-i18n="demo.meta">Por heyGuide · story</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700 text-base" data-i18n-list="demo.points">
+          <li>Empaqueta 5–10 fotos, videos o notas en una colección corta.</li>
+          <li>Pon tu precio (recomendado €3–10) y comparte tu link en bio.</li>
+          <li>Sin suscripciones eternas ni cursos largos.</li>
+          <li>Ideal para guías, chefs, creadores y micro-negocios.</li>
+        </ul>
+        <a href="#" data-join class="btn btn-primary hvr-raise" data-i18n="demo.cta">Quiero publicar mi primera colección</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- I18N + Interacciones -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const formByLang = {
+      es:"https://forms.gle/a2pDNuQy1dNuTMkZ8",
+      en:"https://forms.gle/2cMwNbAchLeyFYub8",
+      it:"https://forms.gle/WFxcNRekjsm9rWKv5"
+    };
+
+    const translations = {
+      en:{
+        "meta.title":"heyGuide · Join as a creator","meta.desc":"Package what you know and start monetizing it.",
+        "nav.benefits":"Benefits","nav.how":"How it works","nav.join":"Join",
+        "cta.join":"Join the waitlist →","cta.joinShort":"Join","cta.final.see":"See cases",
+        "hero.headline":"Package what you know and start monetizing it.","hero.sub":"Do you teach, guide tours, cook or create content? Turn your knowledge into a simple digital product and sell it online to anyone, anywhere.","hero.note":"After submitting, 1-minute questionnaire.","cta.joinBtn":"Join","hero.cases":"See real cases",
+        "benefit.1.title":"Earn money sharing what you know","benefit.1.desc":"Get paid every time someone unlocks your collection.","benefit.1.copy":"Set a simple price (€3–10 recommended), share your link and that's it. No complex marketplaces or hidden fees.","benefit.1.cta":"See examples",
+        "benefit.2.title":"Easy stories, not endless courses","benefit.2.desc":"Group your photos, videos or notes into short, coherent stories.","benefit.2.copy":"Upload 5–10 pieces, add notes and a map/checklist. Publish in under an hour and update anytime.","benefit.2.cta":"How it works",
+        "benefit.3.title":"Share the link and get paid","benefit.3.desc":"WhatsApp, Instagram, TikTok… no middlemen.","benefit.3.copy":"Place the link in your bio, stories, or a QR. Payments are secure and you receive income automatically.","benefit.3.cta":"Create my collection",
+        "how.title":"How it works","how.1.title":"1. Create your story collection","how.1.desc":"Use photos, videos, notes or short audios.","how.2.title":"2. Set your price","how.2.desc":"Recommended €3–10.","how.3.title":"3. Share your link and earn","how.3.desc":"Every client that unlocks it is extra income.",
+        "case.badge":"Real case",
+        "cases.1.title":"“When do we do another tour?”",
+        "cases.1.body":"I’m a guide in Rome. Many wanted to repeat with me but our dates didn’t match. With heyGuide I packaged 10 short stories with my favorite spots, brief videos and context notes. Now anyone can unlock it whenever they want—no schedule coordination.",
+        "cases.1.cta":"I want to publish my collection",
+        "cases.2.title":"From TikTok to a sellable “collection”",
+        "cases.2.body":"I had scattered tips across videos. In heyGuide I built a clear collection: 5–10 short clips, a downloadable checklist and a map. My followers now have everything in one place—and I monetize without subscriptions.",
+        "cases.2.cta":"Create my first collection",
+        "cases.3.title":"My 7 “fail-proof” recipes",
+        "cases.3.body":"People kept asking for my step-by-step recipes. I made a collection with short vertical videos, ingredient lists and chef notes. I share it via WhatsApp and Instagram. Simple, direct, no never-ending course.",
+        "cases.3.cta":"Publish my recipes",
+        "cta.final.head":"Start earning today by sharing what you already know.","cta.final.btn":"Join","footer.join":"Join",
+        "demo.badge":"Story · 27 s","demo.title":"What is heyGuide in 30 seconds?","demo.meta":"By heyGuide · story",
+        "demo.points":[ "Package 5–10 photos, videos or notes into a short collection.","Set your price (€3–10 recommended) and share your bio link.","No endless subscriptions or long courses.","Perfect for guides, chefs, creators and micro-businesses." ],
+        "demo.cta":"I want to publish my first collection",
+        "locked.badge":"🔒 Locked",
+        "locked1.title":"Street food Naples","locked1.meta":"Gastro · 7 stories","locked1.price":"€5.90",
+        "locked2.title":"Apps 10× faster (AI+Bubble)","locked2.meta":"Productivity · 6 stories","locked2.price":"€9.90"
+      },
+      it:{
+        "meta.title":"heyGuide · Unisciti come creator","meta.desc":"Confeziona ciò che sai e inizia a monetizzarlo.",
+        "nav.benefits":"Vantaggi","nav.how":"Come funziona","nav.join":"Unisciti",
+        "cta.join":"Unisciti alla lista d’attesa →","cta.joinShort":"Uniscimi","cta.final.see":"Vedi i casi",
+        "hero.headline":"Confeziona ciò che sai e inizia a monetizzarlo.","hero.sub":"Fai lezioni, tour, ricette o crei contenuti? Trasforma le tue competenze in un semplice prodotto digitale e vendilo online a chiunque, ovunque.","hero.note":"Dopo l’invio, questionario di 1 minuto.","cta.joinBtn":"Uniscimi","hero.cases":"Vedi casi reali",
+        "benefit.1.title":"Guadagna condividendo ciò che sai","benefit.1.desc":"Vieni pagato ogni volta che qualcuno sblocca la tua collezione.","benefit.1.copy":"Imposta un prezzo semplice (consigliato €3–10), condividi il link e basta. Niente marketplace complessi o costi nascosti.","benefit.1.cta":"Vedi esempi",
+        "benefit.2.title":"Storie semplici, non corsi infiniti","benefit.2.desc":"Raggruppa foto, video o note in storie brevi e coerenti.","benefit.2.copy":"Carica 5–10 elementi, aggiungi note e una mappa/checklist. Pubblica in meno di un’ora e aggiorna quando vuoi.","benefit.2.cta":"Come funziona",
+        "benefit.3.title":"Condividi il link e incassa","benefit.3.desc":"WhatsApp, Instagram, TikTok… senza intermediari.","benefit.3.copy":"Metti il link in bio, nelle storie o in un QR. I pagamenti sono sicuri e ricevi l’incasso automaticamente.","benefit.3.cta":"Crea la mia collezione",
+        "how.title":"Come funziona","how.1.title":"1. Crea la tua collezione di storie","how.1.desc":"Usa foto, video, note o brevi audio.","how.2.title":"2. Imposta il prezzo","how.2.desc":"Consigliato €3–10.","how.3.title":"3. Condividi il link e guadagna","how.3.desc":"Ogni cliente che la sblocca è reddito extra.",
+        "case.badge":"Caso reale",
+        "cases.1.title":"\"Quando facciamo un altro tour?\"",
+        "cases.1.body":"Sono guida a Roma. Molti volevano rifarlo con me ma le date non coincidevano. Con heyGuide ho confezionato 10 storie brevi con i miei punti preferiti, video rapidi e note di contesto. Ora chiunque può sbloccarle quando vuole — senza incastri di agenda.",
+        "cases.1.cta":"Voglio pubblicare la mia collezione",
+        "cases.2.title":"Da TikTok a una “collezione” vendibile",
+        "cases.2.body":"Avevo consigli sparsi nei video. Su heyGuide ho creato una collezione chiara: 5–10 clip brevi, checklist scaricabile e mappa. I miei follower ora hanno tutto in un unico posto — e io monetizzo senza abbonamenti.",
+        "cases.2.cta":"Crea la mia prima collezione",
+        "cases.3.title":"Le mie 7 ricette “infallibili”",
+        "cases.3.body":"Mi chiedevano sempre le ricette passo-passo. Ho fatto una collezione con brevi video verticali, lista ingredienti e note da chef. La condivido su WhatsApp e Instagram. Semplice, diretto, senza un corso infinito.",
+        "cases.3.cta":"Pubblica le mie ricette",
+        "cta.final.head":"Inizia a guadagnare oggi condividendo ciò che già sai.","cta.final.btn":"Uniscimi","footer.join":"Unisciti",
+        "demo.badge":"Story · 27 s","demo.title":"Cos’è heyGuide in 30 secondi?","demo.meta":"Di heyGuide · story",
+        "demo.points":[ "Raggruppa 5–10 foto, video o note in una collezione breve.","Imposta il prezzo (€3–10 consigliato) e condividi il link in bio.","Niente abbonamenti eterni o corsi lunghi.","Perfetto per guide, chef, creator e micro-business." ],
+        "demo.cta":"Voglio pubblicare la mia prima collezione",
+        "locked.badge":"🔒 Bloccato",
+        "locked1.title":"Street food Napoli","locked1.meta":"Gastro · 7 storie","locked1.price":"€5,90",
+        "locked2.title":"App 10× più veloci (AI+Bubble)","locked2.meta":"Produttività · 6 storie","locked2.price":"€9,90"
+      },
+      es:{
+        "meta.title":"heyGuide · Únete como creador","meta.desc":"Empaqueta lo que sabes y empieza a monetizarlo.",
+        "nav.benefits":"Beneficios","nav.how":"Cómo funciona","nav.join":"Únete",
+        "cta.join":"Únete a la lista →","cta.joinShort":"Unirme","cta.final.see":"Ver casos",
+        "hero.headline":"Empaqueta lo que sabes y empieza a monetizarlo.","hero.sub":"¿Das clases, tours, recetas o compartes contenido? Transforma tu conocimiento en un producto digital simple y véndelo online a cualquier persona, en cualquier lugar.","hero.note":"Tras enviar, 1 min de cuestionario.","cta.joinBtn":"Unirme","hero.cases":"Ver casos reales",
+        "benefit.1.title":"Gana dinero compartiendo lo que sabes","benefit.1.desc":"Cobra cada vez que alguien desbloquee tu colección.","benefit.1.copy":"Define un precio simple (recomendado €3–10), comparte tu enlace y listo. Sin marketplace complejo ni comisiones ocultas.","benefit.1.cta":"Ver ejemplos",
+        "benefit.2.title":"Stories fáciles, no cursos eternos","benefit.2.desc":"Agrupa tus fotos, videos o notas en historias cortas y coherentes.","benefit.2.copy":"Sube 5–10 piezas, añade notas y un mapa/checklist. Publicas en menos de una hora y puedes actualizar cuando quieras.","benefit.2.cta":"Cómo funciona",
+        "benefit.3.title":"Comparte el link y cobra","benefit.3.desc":"WhatsApp, Instagram, TikTok… sin intermediarios.","benefit.3.copy":"Integra el enlace en tu bio, historias o QR. Los pagos se procesan de forma segura y recibes el ingreso automáticamente.","benefit.3.cta":"Crear mi colección",
+        "how.title":"Cómo funciona","how.1.title":"1. Crea tu colección de stories","how.1.desc":"Usa fotos, videos, notas o audios breves.","how.2.title":"2. Pon tu precio","how.2.desc":"Recomendado €3–10.","how.3.title":"3. Comparte el link y cobra","how.3.desc":"Cada cliente que lo desbloquee es ingreso extra.",
+        "case.badge":"Caso real",
+        "cases.1.title":"“¿Cuándo hacemos otro tour?”",
+        "cases.1.body":"Soy guía en Roma. Muchos querían repetir conmigo pero sus fechas no coincidían. Con heyGuide empaqueté 10 historias cortas con mis puntos favoritos, videos breves y notas de contexto. Ahora cualquiera puede desbloquearlo cuando quiera — sin coordinar agenda.",
+        "cases.1.cta":"Quiero publicar mi colección",
+        "cases.2.title":"De TikTok a “colección” vendible",
+        "cases.2.body":"Tenía tips desperdigados en videos. En heyGuide armé una colección clara: 5–10 clips cortos, checklist descargable y mapa. Mis seguidores ahora lo tienen todo ordenado en un solo lugar — y yo monetizo sin suscripciones.",
+        "cases.2.cta":"Crear mi primera colección",
+        "cases.3.title":"Mis 7 recetas “infalibles”",
+        "cases.3.body":"Siempre me pedían mis recetas paso a paso. Hice una colección con videos verticales cortos, lista de ingredientes y notas de chef. La comparto por WhatsApp e Instagram. Simple, directo y sin producir un curso eterno.",
+        "cases.3.cta":"Publicar mis recetas",
+        "cta.final.head":"Empieza a ganar dinero hoy compartiendo lo que ya sabes.","cta.final.btn":"Unirme","footer.join":"Únete",
+        "demo.badge":"Story · 27 s","demo.title":"¿Qué es heyGuide en 30 segundos?","demo.meta":"Por heyGuide · story",
+        "demo.points":[ "Empaqueta 5–10 fotos, videos o notas en una colección corta.","Pon tu precio (recomendado €3–10) y comparte tu link en bio.","Sin suscripciones eternas ni cursos largos.","Ideal para guías, chefs, creadores y micro-negocios." ],
+        "demo.cta":"Quiero publicar mi primera colección",
+        "locked.badge":"🔒 Locked",
+        "locked1.title":"Street food Napoli","locked1.meta":"Gastro · 7 stories","locked1.price":"€5.90",
+        "locked2.title":"Apps 10× rápido (AI+Bubble)","locked2.meta":"Productividad · 6 stories","locked2.price":"€9.90"
+      }
+    };
+
+    const supported=["es","en","it"];
+    const detectLang=()=>{
+      const urlParam=new URLSearchParams(location.search).get("lang");
+      const nav=(urlParam||navigator.language||navigator.userLanguage||"en").slice(0,2).toLowerCase();
+      return supported.includes(nav)?nav:"en";
+    };
+
+    const stripLeadingEmoji = (s) => (s||"").replace(/^\p{Extended_Pictographic}+\s*/u,"");
+
+    function setLang(lang){
+      // texto simple
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key=el.getAttribute("data-i18n");
+        const t=translations[lang]&&translations[lang][key];
+        if(t!==undefined) el.textContent=t;
+      });
+      // texto sin emoji inicial
+      document.querySelectorAll("[data-i18n-nemoji]").forEach(el=>{
+        const key=el.getAttribute("data-i18n-nemoji");
+        let t=translations[lang]&&translations[lang][key];
+        if(t!==undefined) el.textContent = stripLeadingEmoji(t);
+      });
+      // listas
+      document.querySelectorAll("[data-i18n-list]").forEach(el=>{
+        const key=el.getAttribute("data-i18n-list");
+        const arr=translations[lang]&&translations[lang][key];
+        if(Array.isArray(arr)) el.innerHTML=arr.map(x=>`<li>${x}</li>`).join("");
+      });
+
+      // meta
+      const t=translations[lang];
+      if(t&&t["meta.title"]) document.title=t["meta.title"];
+      const m=document.querySelector('meta[name="description"]');
+      if(m&&t&&t["meta.desc"]) m.setAttribute("content",t["meta.desc"]);
+
+      document.documentElement.setAttribute("lang",lang);
+      document.getElementById("lang-select").value=lang;
+      updateFormLinks(lang);
+    }
+
+    function updateFormLinks(lang){
+      const form=formByLang[lang]||formByLang.en;
+      document.querySelectorAll("[data-join]").forEach(a=>a.setAttribute("href",form));
+    }
+
+    // Smooth scroll
+    document.querySelectorAll("a[href^='#']").forEach(link=>{
+      link.addEventListener("click", e=>{
+        const t=document.querySelector(link.getAttribute("href")); if(t){ e.preventDefault(); t.scrollIntoView({behavior:"smooth"}); }
+      });
+    });
+
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{ if(ent.isIntersecting){ ent.target.classList.add('in'); io.unobserve(ent.target);} });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // init
+    const initial=detectLang(); setLang(initial);
+    document.getElementById("lang-select").addEventListener("change",(e)=>{
+      setLang(e.target.value);
+      const u=new URL(location); u.searchParams.set("lang",e.target.value); history.replaceState({}, "", u);
+    });
+
+    // Tracking Join
+    window.dataLayer=window.dataLayer||[];
+    document.querySelectorAll('[data-join]').forEach(el=>{
+      el.addEventListener('click',()=>{
+        window.dataLayer.push({event:'join_click',button_text:(el.textContent||'').trim(),lang:document.documentElement.lang||'en',page_location:location.href,link_url:el.getAttribute('href')||''});
+      });
+    });
+
+    // Modal + captions
+    const demoModal=document.getElementById('demo-modal');
+    const demoVideo=document.getElementById('demo-video');
+
+    const selectCaptions = () => {
+      const pageLang = (document.documentElement.lang || 'en').slice(0,2).toLowerCase();
+      const tracks = demoVideo.textTracks; if (!tracks || !tracks.length) return;
+      for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
+      let chosen = Array.from(tracks).find(t => (t.language || '').slice(0,2) === pageLang) ||
+                   Array.from(tracks).find(t => (t.language || '').slice(0,2) === 'en');
+      if (chosen) chosen.mode = 'showing';
+    };
+
+    const openDemo = () => {
+      demoModal.classList.remove('hidden');
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
+      window.dataLayer.push({event:'demo_open',lang:document.documentElement.lang || 'en'});
+      if (demoVideo.readyState >= 1) selectCaptions();
+      else demoVideo.addEventListener('loadedmetadata', selectCaptions, { once:true });
+      demoVideo.play().catch(()=>{});
+    };
+
+    const closeDemo = () => {
+      demoModal.classList.add('hidden');
+      document.documentElement.classList.remove('modal-open');
+      document.body.classList.remove('modal-open');
+      demoVideo.pause();
+    };
+
+    document.querySelectorAll('[data-open-demo]').forEach(el=>el.addEventListener('click', openDemo));
+    document.getElementById('demo-close').addEventListener('click', closeDemo);
+    demoModal.addEventListener('click',(e)=>{ if(e.target===demoModal) closeDemo(); });
+    demoVideo.addEventListener('ended',()=>{ window.dataLayer.push({event:'demo_ended'}); });
+  </script>
+</body>
+</html>
