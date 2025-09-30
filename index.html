@@ -116,13 +116,27 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7WGJK95"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
- <!-- Header -->
+  
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
   <div class="mx-auto max-w-7xl px-6 flex items-center justify-between py-4">
     <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
-      <img src="/logo-risspo.svg" alt="Risspo" class="h-10 w-10 drop-shadow" loading="eager" decoding="async" />
-      <span>Risspo</span>
+      <!-- Mobile: cuadrado -->
+      <img
+        src="/risspo-logo.svg"
+        alt="Risspo"
+        class="block md:hidden h-10 w-10 drop-shadow"
+        loading="eager"
+        decoding="async"
+      />
+      <!-- Desktop: landscape -->
+      <img
+        src="/risspo-logo-landscape.svg"
+        alt="Risspo"
+        class="hidden md:block h-8 w-auto drop-shadow"
+        loading="eager"
+        decoding="async"
+      />
     </a>
 
     <nav class="hidden md:flex items-center gap-8 text-sm">
@@ -140,6 +154,7 @@
     </div>
   </div>
 </header>
+
 
 
   <!-- HERO + BENEFICIOS -->
