@@ -119,35 +119,37 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-    <div class="mx-auto max-w-7xl px-6 flex items-center justify-between py-4">
-      <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
-        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-10 h-10 drop-shadow">
-          <g transform="translate(58,54) rotate(-5,100,70)">
-            <rect x="0" y="40" width="140" height="90" rx="18" fill="#F68C1E" opacity="0.20"/>
-            <rect x="10" y="20" width="140" height="90" rx="18" fill="#F68C1E" opacity="0.35"/>
-            <rect x="20" y="0"  width="140" height="90" rx="18" fill="#F68C1E"/>
-          </g>
-        </svg>
-        <span>Risspo</span>
-      </a>
+  <!-- Header (solo este bloque) -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+  <div class="mx-auto max-w-7xl px-6 flex items-center justify-between py-4">
+    <!-- Brand -->
+    <a href="/" class="flex items-center gap-3 font-semibold tracking-tight">
+      <!-- Logo landscape -->
+      <img src="risspo-logo-landscape.svg" alt="Risspo" class="h-8 md:h-9 w-auto" loading="eager" />
+      <span class="sr-only">Risspo</span>
+    </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm">
-        <a href="#beneficios" class="text-gray-600 hover:text-gray-900" data-i18n="nav.benefits">Beneficios</a>
-        <a href="#funciona" class="text-gray-600 hover:text-gray-900" data-i18n="nav.how">Cómo funciona</a>
-        <a href="#signup" class="text-gray-600 hover:text-gray-900" data-i18n="nav.join">Únete</a>
-      </nav>
+    <!-- Nav (desktop) -->
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#beneficios" class="text-gray-600 hover:text-gray-900" data-i18n="nav.benefits">Beneficios</a>
+      <a href="#funciona" class="text-gray-600 hover:text-gray-900" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#signup" class="text-gray-600 hover:text-gray-900" data-i18n="nav.join">Únete</a>
+    </nav>
 
-      <div class="flex items-center gap-3">
-        <label class="sr-only" for="lang-select">Language</label>
-        <select id="lang-select" class="lang hvr-raise">
-          <option value="es">ES</option><option value="en">EN</option><option value="it">IT</option>
-        </select>
-        <a href="#" data-join class="btn btn-ghost hvr-raise" data-i18n="cta.joinShort">Unirme</a>
-      </div>
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <label class="sr-only" for="lang-select">Idioma</label>
+      <select id="lang-select" class="lang appearance-none px-3 py-2 rounded-full border border-gray-300 text-sm text-gray-700 bg-white bg-[url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M6 8l4 4 4-4' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")] bg-no-repeat bg-[length:16px] bg-[right_.5rem_center] pr-8">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+      </select>
+      <a href="#" data-join class="inline-flex items-center gap-2 rounded-full font-semibold px-4 py-2 border border-gray-200 text-gray-700 hover:bg-gray-50" data-i18n="cta.joinShort">Unirme</a>
+      <a href="#signup" class="hidden sm:inline-flex items-center gap-2 rounded-full font-semibold px-4 py-2 bg-[#F68C1E] text-white hover:opacity-90" data-i18n="cta.joinBtn">Crear mi Pack</a>
     </div>
-  </header>
-
+  </div>
+</header>
+  
   <!-- HERO + BENEFICIOS -->
   <section class="relative mesh-gradient mesh-soft">
     <div id="hero" class="mx-auto max-w-7xl px-6 pt-20 md:pt-28 pb-12 grid lg:grid-cols-2 gap-10 items-start">
